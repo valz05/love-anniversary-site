@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paragraph - Love Anniversary</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Adding Petit Formal Script font -->
+  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Petit Formal Script', cursive;
+      padding: 2rem;
+      background: #fff0f6;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .content-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: 5rem auto;
+      position: relative;
+      z-index: 10;
+    }
+
+    h1 {
+      color: #ff69b4;
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #ff69b4;
+      margin-top: 1.5rem;
+    }
+
+    p {
+      color: #333;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-top: 1rem;
+    }
+
+    .back-btn {
+      background-color: #ff69b4;
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 2rem;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .back-btn:hover {
+      background-color: #e75480;
+    }
+
+    /* Floating Hearts */
+    .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: floatUp 10s linear infinite;
+      opacity: 0.8;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -50%;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -50%;
+      top: 0;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Floating Hearts Script -->
+  <script>
+    const heartColors = ['#ffb6c1', '#ff69b4', '#ff1493', '#ffc0cb'];
+    for (let i = 0; i < 40; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDelay = (Math.random() * 8) + 's';
+      heart.style.width = heart.style.height = Math.random() * 15 + 15 + 'px';
+      heart.style.background = heartColors[Math.floor(Math.random() * heartColors.length)];
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <div class="content-box">
+    <h1>Our Love Story</h1>
+    <h2>Those are reasons on why I love you:</h2>
+    <p>I love you for a hundred things, but when I sit down and really consider it, it's not a list of things that makes me love you so much—it's everything. You truly are one of a kind, and my love for you is so profound that I sometimes catch myself questioning how I got so lucky. So, here is all that I can express, though I know that it still will not be nearly adequate to express just how much you mean to me:</p>
+
+    <p>Even when we are not together, I sense your love with me, in every moment, like an unseen thread between us. It's almost as if your love is a constant in my life, comforting me without needing to be present. It's like I can carry your love wherever I go, and that's a truly special thing. Your words are my solace now. No matter how crazy or stressful life gets, all it takes is hearing from you to make me feel calm. You're my calm in the storm, and you always seem to know just what to say to lift me up. In a world so full of noise, yours is the voice that I hear clearly, guiding me.</p>
+
+    <p>What makes you all the more remarkable is the fact that you understand me in a way that no one else can. It's like you've known me my whole life, even though we haven't been physically together for years. You know me better than the people who've known me for years, and that's not something that comes easily. It's as if you're able to look at me as the person that I truly am, void of pretence or judgment. There's this unspoken understanding that we have, as if we're on the same wavelength even when we say nothing at all. Your messages, which I await every day eagerly, have become my highlight of the day. They make everything okay regardless of how tough or stressful my day has been. A simple message from you can make all the difference, and your love shines through in each and every one.</p>
+
+    <p>And even when we are not together, I sense you with me in small ways. You can make me smile from miles away, and there is something about the way you send your messages that makes me feel as though you are right beside me. Even though we are physically apart, you somehow manage to calm my nerves with just one message. You possess this incredible ability to read my emotions, to feel when I need comforting, when I need reassurance, and when I just need to hear your voice. And that voice? It's home. Even on the phone, your voice has a way of making me feel loved and safe in a way that nothing else can.</p>
+
+    <p>There's this chemistry between us that cannot be denied, and we have never even had to touch in order for it to be present. It's this unseen, and yet very real, connection that makes everything we have so special. You make me feel heard in a way I never have before—not only listened to, but actually <em>seen</em>. You know me, and you care in a way that's so real, and that's not usual. We can talk about anything and everything, and it's like we never run out of things to say. We're so connected that distance doesn't matter, and the emotional bond we've created is stronger than many of the physically together couples I know. What touches me most is your attention to detail.</p>
+
+    <p>You notice the things other people wouldn't, the small things that mean everything to me. It doesn't even matter if it's something I was thinking about months ago or a little habit I do, you're always paying attention, and it makes me feel so incredibly seen. When you say, "I miss you," they're not just words—it's a sentence that's coming from the depths of your soul. And I can feel it, every single time. Every single time I hear your name on my phone, it's a tiny little spark of happiness. I get butterflies again, in spite of everything that we've been through.</p>
+
+    <p>You have a way of making me feel something so intensely, in spite of not having met in person yet. I have started dreaming of the day that we finally meet. The prospect of it gives me such anticipation and excitement. It is not so much that I cannot wait to see you, but I cannot wait to live with you in person. You're aware of my routines, my mannerisms, even my sleep patterns, yet still, every night you text me goodnight so that I never need to experience loneliness. It's the little things that you do that make me feel loved and cared for in ways that I never expect. You're the first one that I want to share everything with—the good, the bad, the silly little details of my day. It already seems like we've had so many memories, even though most of them are virtual.</p>
+
+    <p>And despite the distance, the memories we're creating are just as real and valid as any moment we might have otherwise had in person. You love me in a way that doesn't need anything physical, but it still feels just as deep, just as real. You've shown me that love is not about distance—it's about connection, effort, and understanding. You make love easy, even when it's not. There are challenges, naturally, but you make it all feel worthwhile. Your energy carries through every message, every call, every little exchange, and I feel so connected to you.</p>
+
+    <p>I know you, not due to words, but due to the essence of who you are. And that trust you place in me, even when we are not physically together, is something I treasure so much. It's a trust that I believe is impenetrable. We've been faithful to this love, even though it's not yet tangible in the traditional sense, but we both trust in it with everything we have. Even when we're apart, you make the distance seem so irrelevant. It's as though you've succeeded in closing the gap, in making the miles vanish. You ground me, and every word you say is soothing to my soul. You've taught me so much about emotional intimacy—about how love can be found in every word, every thought, even when we're not physically in the same place.</p>
+
+    <p>You've shown me that love is so much more than being in the same room. It's doing everything you can to make the other person feel loved, seen, and heard, wherever you are. You never leave me feeling alone. Your messages are always so loving. I can feel the effort and thoughtfulness you put into every message whenever you text me. You made me believe in a love worth waiting for. You've made me fall in love with you—not with the idea of you, but with everything you are. You've made me fall in love with your heart, mind, and soul.</p>
+
+    <p>I'm so lucky to have you in my life, and every day I thank heaven for you. Despite the time zones, we're in perfect sync. You've turned forever into a possibility, one that we're building every day, day after day. Your effort in this relationship would be something most people won't understand, yet it's something I hold so dearly to my heart. You've shown me that love is deliberate, that it's working even when it's not the easiest thing to do. It's about choosing each other every day, and I'm so lucky you've chosen me.</p>
+
+    <p>We're building something real here, brick by brick, and I don't want to build it with anyone else. Your consistency is romantic in a way. Every time I get to hear from you, I know I am loved. Every message, every call, every little gesture is a reminder I am loved. You've made me want to be a better partner, a better person, and every day I can feel myself growing with you. I am so lucky to have you, and it is not just because of the big moments—but because of the small, everyday shows of affection you show me.</p>
+
+    <p>You're so thoughtful, always putting time and effort into every message. You open segments of your world to me, inviting me into your most vulnerable, intimate places. And I've opened mine up to you as well. You've taught me that vulnerability is beautiful, and I feel comfortable being vulnerable with you. You still manage to love me with your entire heart despite the distance.</p>
+
+    <p>I've never felt as close to someone as I do to you, even though I haven't met you personally. Your love is patient and kind. You love me with abandon, unconditionally, and I love the way you wear your heart on your sleeve. You've shown me that love isn't always passion, but growth, trust, and a commitment to one another that doesn't waver. You've given me your heart, and I will never take that for granted. You tell me the sweetest things, and each thing you tell me makes me feel wanted, adored, and loved. I can already picture our life together. I see the little things we'll do, where we'll go, the memories that we'll share. You're proof that love has no limits, no constraints. And even though the distance between us is present, it's almost romantic, like we're proving that love can conquer all despite the distance between two individuals. You never make me feel neglected, and you recall everything that I tell you.</p>
+
+    <p>You're present in every way that counts. You make time for us, and you envision our future together with so much detail. Every time you say "hi," it's as if you're professing love. You've made me believe in us, and in this love we're building. You make me feel like the luckiest person alive, and I wouldn't trade this love for anything. You have a poet's heart and a lover's soul. You're treating me like I'm the hero of a love story, and your vulnerability I so much adore. You open up your heart to me without a second thought, and you've made me fall in love with love itself. Every second with you counts, and I know, beyond a shadow of a doubt, that I'm yours—even from a thousand miles away.</p>
+
+    <a href="home.html" class="back-btn">Back to Home</a>
+  </div>
+
+</body>
+</html>

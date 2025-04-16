@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Gallery - Sunsets</title>
+    <!-- Updated font to Petit Formal Script -->
+    <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Petit Formal Script', cursive;
+            background-color: #ffe6f2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Petit Formal Script', cursive;
+            color: #ff66b2;
+            font-size: 3em;
+            margin-top: 20px;
+        }
+
+        p {
+            font-family: 'Petit Formal Script', cursive;
+            color: #cc3399;
+            font-size: 1.2em;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2em;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0s 0.5s;
+        }
+
+        .gallery-item:hover .caption {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s ease;
+        }
+
+        .heart {
+            position: absolute;
+            animation: heartAnimation 3s infinite;
+        }
+
+        @keyframes heartAnimation {
+            0% {
+                top: 10%;
+                left: 10%;
+                opacity: 1;
+            }
+            50% {
+                top: 30%;
+                left: 50%;
+                opacity: 0.6;
+            }
+            100% {
+                top: 10%;
+                left: 90%;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Picture Gallery - Sunsets 🌅💖</h1>
+    <p>Each sunset reminds me of your beauty that lingers in the sky every evening, burning a wonderful memory in the back of my mind. 🌞✨</p>
+    
+    <!-- Floating hearts -->
+    <div class="heart" style="top: 10%; left: 10%;">❤️</div>
+    <div class="heart" style="top: 30%; left: 50%;">💖</div>
+    <div class="heart" style="top: 60%; left: 70%;">💗</div>
+    
+    <!-- Image gallery -->
+    <div class="gallery">
+        <!-- All images you provided -->
+        <div class="gallery-item">
+            <img src="https://cdn.discordapp.com/attachments/1335651115852890253/1362099264666341587/IMG_3217.jpg?ex=6801294b&is=67ffd7cb&hm=885b649b5d1898bb439804eb29f9f4651441134823ac689904d9592b23b2e5a1&" alt="Sunset 1">
+            <div class="caption">Golden Horizons 🌅</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://cdn.discordapp.com/attachments/1335651115852890253/1362099265274646638/IMG_3212.jpg?ex=6801294b&is=67ffd7cb&hm=26dfe939a25d524d06f6b77294a990a31f1d24463fc2d3a141835c454cf0c3e8&" alt="Sunset 2">
+            <div class="caption">Vibrant Skies 🌇</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://cdn.discordapp.com/attachments/1335651115852890253/1362099265937084586/IMG_3207.jpg?ex=6801294b&is=67ffd7cb&hm=d71ed485b3e59315044ea544ee9f268d633b2bd46e64b62317f6ead8ff66a7c0&" alt="Sunset 3">
+            <div class="caption">Calming Blues 🌊</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://cdn.discordapp.com/attachments/1335651115852890253/1362099266650243423/IMG_3209.jpg?ex=6801294b&is=67ffd7cb&hm=2109da0efe706af888794ca3891e65841090008bc6d9ac73dc3743f4ec4815d0&" alt="Sunset 4">
+            <div class="caption">Endless Beauty 🌞</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://cdn.discordapp.com/attachments/1335651115852890253/1362099267354759178/IMG_2892.jpg?ex=6801294b&is=67ffd7cb&hm=2388c8f1df0dad784602e3700fab6d064450bc8d053646ab690280816d77b7f2&" alt="Sunset 5">
+            <div class="caption">Twilight Reflections 🌅</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://cdn.discordapp.com/attachments/1335651115852890253/1362099268076175501/IMG_2891.jpg?ex=6801294c&is=67ffd7cc&hm=71e6259025950c87be727967f9e31e27166de28743cdc91d6eb458f4ad5156e5&" alt="Sunset 6">
+            <div class="caption">Soft Hues of Sunset 🌇</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://cdn.discordapp.com/attachments/1335651115852890253/1362099268764176384/IMG_2890.jpg?ex=6801294c&is=67ffd7cc&hm=43dfcf8bf7c34f79cdba80b9674cf0eba062e840e51ccca53437de25099f6559&" alt="Sunset 7">
+            <div class="caption">Glowing Sunset ✨</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://cdn.discordapp.com/attachments/1335651115852890253/1362099269556900090/IMG_2889.jpg?ex=6801294c&is=67ffd7cc&hm=139d190f3b89993652bfd6d9de8d8a998ce602ec4bf5b7ca6f8c748fbc262c6b&" alt="Sunset 8">
+            <div class="caption">Sunset Bliss 🌅</div>
+        </div>
+        
+    </div>
+
+
+ <!-- Back to Home Button -->
+ <a href="home.html" class="back-to-home">
+    <button>Back to Home</button>
+  </a>
+
+  <style>
+    .back-to-home {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      font-family: 'Petit Formal Script', cursive;
+    }
+  
+    .back-to-home button {
+      padding: 10px 25px;
+      font-size: 1.5rem;
+      font-family: 'Petit Formal Script', cursive;
+      background-color: #ff1493;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.2s ease;
+    }
+  
+    .back-to-home button:hover {
+      background-color: #ff69b4;
+      transform: scale(1.05);
+    }
+  </style>
+  
+
+</body>
+</html>

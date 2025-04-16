@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drawings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Petit Formal Script', cursive;
+      background-color: #fff0f5;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 1.8em;
+    }
+
+    img {
+      margin-top: 20px;
+      max-width: 90%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(-45deg);
+      top: 100%;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(-45deg) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(-45deg) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    .back-to-home {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      font-family: 'Petit Formal Script', cursive;
+    }
+
+    .back-to-home button {
+      padding: 10px 25px;
+      font-size: 1.5rem;
+      font-family: 'Petit Formal Script', cursive;
+      background-color: #ff1493;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.2s ease;
+    }
+
+    .back-to-home button:hover {
+      background-color: #ff69b4;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Drawings</h1>
+  <p>Upcoming drawings of the two of us.</p>
+
+  <a href='https://postimages.org/' target='_blank'>
+    <img src='https://i.postimg.cc/7YJ4f5nQ/yunaminji.jpg' alt='yunaminji'/>
+  </a>
+
+  <script>
+    // Create more hearts with random styles
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+
+      const size = Math.floor(Math.random() * 10) + 10; // size between 10-20px
+      heart.style.width = size + 'px';
+      heart.style.height = size + 'px';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animation = `float ${4 + Math.random() * 3}s linear`;
+      heart.style.opacity = Math.random() * 0.5 + 0.5; // opacity 0.5–1
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 8000);
+    }
+
+    // Generate hearts faster
+    setInterval(createHeart, 150);
+  </script>
+
+  <!-- Back to Home Button -->
+  <a href="home.html" class="back-to-home">
+    <button>Back to Home</button>
+  </a>
+
+</body>
+</html>
